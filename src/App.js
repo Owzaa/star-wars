@@ -19,9 +19,9 @@ function App() {
        <SearchAppBar/>
        </span>
       
-  <div className="ListContainer" id="filmContainer">
+  <div className="ListContainer" >
 
-    <List films={film}/>
+    <List films={film} spacing={1} variant="contained"/>
 
 
 

@@ -1,5 +1,6 @@
-.App {
+* {
   text-align: center;
+  padding-top:0% 5px;
 
 }
 
@@ -8,7 +9,7 @@
 
 }
 .ListContainer{
-  min-height: 0vh;
+  min-height: 10vh;
 }
 
 .App-header {

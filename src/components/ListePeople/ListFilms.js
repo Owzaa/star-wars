@@ -5,34 +5,36 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
+
+
 export const List = ({ films }) => {
 
-  const { DataisLoaded } = this.state;
-  if (!DataisLoaded) return <>
-    <h4> Please kindly wait while we fetch your Film List [Data] .... </h4> </>;
+
   return (
-    <div>
-      <h1>LISTED FILMS</h1>
-      <Grid sx={{ flexGrow: 1, overflow: 'hidden', px: 1 }} spacing={3} >
-        {films.map((film, id) => (
-          <Card row sx={{ maxWidth: 450 }}>
-            <CardActionArea>
+    <>
+      <h1>LISTED FILMS</h1>  {films.map((film,id) => (
+      <Grid sx={{ flexGrow: 1, overflow: 'hidden', px: 1 }} spacing={1} >
+      <CardActionArea>
+        
+          <Card  color="danger" elevation={8}   sx={{ maxWidth: 450 }}>
+          
 
-              <ul>
+              
                 < CardContent>
+                
 
-                  <Typography variant="inherit" component="body">
-                    <p key={id = film.id} id="TitleText"><strong>{film.name}</strong> </p>
+                  <Typography color="text.secondary" variant="inherit" component="body">
+                    <p key={id = films} id="TitleText"><strong>{film.name}</strong> </p>
                     <p id="TitleTextContent">{film.title}</p>
                     <p id="TextContent">{film.release_date}</p>
                   </Typography>
                 </CardContent>
-              </ul>
-            </CardActionArea>
+              
           </Card>
-        ))}
+     </CardActionArea>
+      </Grid>   ))}
 
-      </Grid>
-    </div>
+    </>
   )
+
 }
