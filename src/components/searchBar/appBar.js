@@ -83,6 +83,7 @@ export default function SearchAppBar() {
 
             </StyledInputBase>
           </Search>  
+          <br/>
                     <Button variant="contained" color="info" onClick={{SearchForm}} classNmae="btn btn-danger btn-lg">Search</Button>
 
         </Toolbar>
