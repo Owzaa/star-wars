@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import Link from 'react';
 export const List = ({ films }) => {
   return(
   <div>
@@ -13,8 +14,8 @@ export const List = ({ films }) => {
    <CardActionArea>
 
   
-         {films.map((film) => (  
-  <CardContent>
+  {films.map((film) => (  
+ <Link path="filmDetails"> <CardContent>
             
       <Typography variant="subTitle1" component="body2">      
           <p key={film.name} id="TitleText"><strong>{film.name}</strong> </p>
@@ -22,7 +23,9 @@ export const List = ({ films }) => {
            <p id="TextContent">{film.release_date}</p> 
       </Typography>   
       
-      </CardContent>   ) )}
+      </CardContent>
+      </Link>
+         ) )}
   
  
 
