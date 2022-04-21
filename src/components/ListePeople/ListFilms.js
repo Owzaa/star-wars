@@ -13,12 +13,13 @@ export const List = ({ films }) => {
    <CardActionArea>
 
   
-  {films.map((film) => (  
+  {films.map((film,id) => ( 
+   
        <ul> 
  <CardContent>
             
-      <Typography variant="subTitle1" component="body2">      
-          <p key={film.name} id="TitleText"><strong>{film.name}</strong> </p>
+    <Typography variant="inherit" component="paragrapgh">      
+          <p key={id=film.id} id="TitleText"><strong>{film.name}</strong> </p>
            <p id="TitleTextContent">{film.title}</p> 
            <p id="TextContent">{film.release_date}</p> 
       </Typography>   
