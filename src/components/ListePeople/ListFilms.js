@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 
 export const List = ({ films }) => {
 
-  const { DataisLoaded, items } = this.state;
+  const { DataisLoaded } = this.state;
   if (!DataisLoaded) return <>
     <h4> Please kindly wait while we fetch your Film List [Data] .... </h4> </>;
   return (
