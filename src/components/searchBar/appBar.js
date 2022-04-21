@@ -53,8 +53,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <Box sm={{ flexGrow: 1 }}>
+      <AppBar position="sticky">
         <Toolbar>
           <IconButton
             size="large"
@@ -78,12 +78,15 @@ export default function SearchAppBar() {
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
+              accept = "textInput"
               inputProps= {SearchForm}
             >
 
             </StyledInputBase>
           </Search>  </Toolbar> 
-        <Button variant="contained" color="info" onClick={{SearchForm}} classNmae="btn btn-danger btn-lg">Search</Button>
+        <Button size="medium" variant="contained" color="info" onClick={() =>{ 
+    ('SearchForm');
+    }}  classNmae="btn btn-danger btn-lg">Search</Button>
 
        
       </AppBar>
