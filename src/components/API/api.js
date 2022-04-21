@@ -1,5 +1,4 @@
 const urls = [
-  
    "https://swapi.dev/api/films/2/",
 		"https://swapi.dev/api/films/6/",
 		"https://swapi.dev/api/films/3/",

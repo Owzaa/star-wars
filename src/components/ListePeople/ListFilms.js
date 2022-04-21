@@ -1,7 +1,6 @@
 import React from "react"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
@@ -13,7 +12,7 @@ export const List = ({ films }) => {
   return (
     <>
       <h1>LISTED FILMS</h1> 
-    {films.map((film,index) => (
+    {films.map((film) => (
       <Grid sx={{ flexGrow: 1, overflow: 'hidden', px: 1 }} spacing={1}  elevation={8} >
       <CardActionArea>
         
@@ -24,8 +23,8 @@ export const List = ({ films }) => {
                 < CardContent>
                 
 
-                  <div color="text.secondary" variant="inherit" component="body">
-                    <p key={film.index} id="TitleText"><strong>{film.name}</strong> </p>
+                  <div color="text.secondary" variant="blue" component="body">
+                    <p key={film.name} id="TitleText"><strong><h2>{film.name}</h2></strong> </p>
                     <p key={film.title} id="TitleTextContent">{film.title}</p>
                     <p key={film.release_date} id="TextContent">{film.release_date}</p>
                   </div>
