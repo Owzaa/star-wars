@@ -19,8 +19,7 @@ function App() {
        <SearchAppBar/>
        </span>
       
-      <div className="ListContainer" id="filmContainer">
-
+  <div className="ListContainer" id="filmContainer">
 
     <List films={film}/>
 
