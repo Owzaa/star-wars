@@ -15,7 +15,7 @@ export const List = ({ films }) => {
 
   
   {films.map((film) => (  
- <Link path="filmDetails"> <CardContent>
+ <CardContent>
             
       <Typography variant="subTitle1" component="body2">      
           <p key={film.name} id="TitleText"><strong>{film.name}</strong> </p>
@@ -24,7 +24,7 @@ export const List = ({ films }) => {
       </Typography>   
       
       </CardContent>
-      </Link>
+    
          ) )}
   
  
