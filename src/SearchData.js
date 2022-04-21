@@ -19,8 +19,8 @@ export default function SearchForm (props) {
     }
 
 
-    const searchFilms = async term => {
-      if(term.length < 3 || term === '') return
+    const searchFilms = async name => {
+      if(name.length < 3 || name === '') return
       const res = await fetch(`https://swapi.dev/api/films/?search={name}`)
       const data = await res.json()
       await console.log(data)
@@ -31,7 +31,7 @@ export default function SearchForm (props) {
         <input
           type="text"
           value={films}
-          onChange={term => searchFilms(term.target.value)}
+          onChange={name => searchFilms(name.target.value)}
           placeholder="Search by Film (name) "
           required
         />
