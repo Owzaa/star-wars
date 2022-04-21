@@ -12,22 +12,23 @@ export const List = ({ films }) => {
 
   return (
     <>
-      <h1>LISTED FILMS</h1>  {films.map((film,id) => (
-      <Grid sx={{ flexGrow: 1, overflow: 'hidden', px: 1 }} spacing={1} >
+      <h1>LISTED FILMS</h1> 
+    {films.map((film,index) => (
+      <Grid sx={{ flexGrow: 1, overflow: 'hidden', px: 1 }} spacing={1}  elevation={8} >
       <CardActionArea>
         
-          <Card  color="danger" elevation={8}   sx={{ maxWidth: 450 }}>
+          <Card color="dark"  sx={{ maxWidth: 450 }}>
           
 
               
                 < CardContent>
                 
 
-                  <Typography color="text.secondary" variant="inherit" component="body">
-                    <p key={id = films} id="TitleText"><strong>{film.name}</strong> </p>
-                    <p id="TitleTextContent">{film.title}</p>
-                    <p id="TextContent">{film.release_date}</p>
-                  </Typography>
+                  <div color="text.secondary" variant="inherit" component="body">
+                    <p key={film.index} id="TitleText"><strong>{film.name}</strong> </p>
+                    <p key={film.title} id="TitleTextContent">{film.title}</p>
+                    <p key={film.release_date} id="TextContent">{film.release_date}</p>
+                  </div>
                 </CardContent>
               
           </Card>
