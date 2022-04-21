@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import SearchForm from '../../SearchData';
-
+import { Button } from '@mui/material';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -82,7 +82,9 @@ export default function SearchAppBar() {
             >
 
             </StyledInputBase>
-          </Search>
+          </Search>  
+                    <Button variant="contained" color="info" onClick={{SearchForm}} classNmae="btn btn-danger btn-lg">Search</Button>
+
         </Toolbar>
       </AppBar>
     </Box>
