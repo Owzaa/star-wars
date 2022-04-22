@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 
 
 
-export const List = ({ films }) => {
+export const List = ({ films,props }) => {
 
 
   return (
@@ -18,7 +18,7 @@ export const List = ({ films }) => {
       <Grid  sx={{ flexGrow: 1, overflow: 'hidden', px: 2 }}   elevation={12} >
       <CardActionArea>
         
-          <Card className="cardContainer" color="primary"  sx={{ maxWidth: 350 }}>
+          <Card onClick={() => props.onClick(props.item)} className="cardContainer" color="primary"  sx={{ maxWidth: 350 }}>
                       
                 < CardContent >
                 

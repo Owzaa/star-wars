@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import { List } from './components/ListePeople/ListFilms';
 import { fetchData } from "./components/API/api";
 import SearchAppBar from "./components/searchBar/appBar";
-import FilmDetails from "./components/filmDetails"
+import Footer from "./components/Footer";
 function App() {
   const [film, setFilm] = useState([]);
 
@@ -15,14 +15,9 @@ function App() {
 
       
   return ( 
-  <div className="App">
-    <Router>
-      <Switch>
-     
-        <Route exact path="/details/" component={FilmDetails} />
-      </Switch>
-    </Router>
-   
+ 
+ <>
+   <div className="App"> 
       <header className="App-header">
         <span className="searchBar">
           <SearchAppBar />
@@ -36,7 +31,10 @@ function App() {
         </div>
 
       </header>
+
     </div>
+   <section>
+     <footer><Footer classNme="stickyBottom"/></footer> </section></>
   );
 }
 
