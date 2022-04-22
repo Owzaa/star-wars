@@ -26,6 +26,7 @@ const Footer = () => (
     },
     copyRight: {
       marginTop: 10,
+      justifyContent: "center",
       color: "#fff",
       fontSize: "1rem",
       textAlign: "center"
