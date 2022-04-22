@@ -11,7 +11,7 @@ export default function SearchForm (props) {
       event.preventDefault()
   
       
-        .get(SearchForm)
+        .get(films)
         .then(resp => {
           props.onSubmit(resp.data)
           setFilms('')
