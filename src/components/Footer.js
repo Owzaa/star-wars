@@ -16,7 +16,7 @@ const Footer = () => (
       bottom: 0,
       width: "100%",
       position:"bottom",
-      backgroundColor: "#333"
+      backgroundColor: "#222"
     },
     rowStyle: {
       height: 50,
