@@ -24,7 +24,7 @@ function App() {
         <h3>Search Results: </h3>
         {film && (
           <ul>
-            {film.map(film => (
+            {film.map((film) => (
               <li key={film.name}>{film.name}</li>
             ))}
           </ul>

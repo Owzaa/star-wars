@@ -37,27 +37,29 @@ export const List = ({ films }) => {
   return (
     <>
       <h1>LISTED FILMS</h1> 
-    {films.map((film) => (  
-      <ul key={film.id}>
+    {films.map((film,index) => (  
+      <ul key={index}>
       
-      <Grid  sx={{ flexGrow: 1, overflow: 'hidden', px: 1 }} spacing={1}  elevation={8} >
+      <Grid  sx={{ flexGrow: 1, overflow: 'hidden', px: 2 }}   elevation={8} >
       <CardActionArea>
         
           <Card color="primary"  sx={{ maxWidth: 350 }}>
                       
-                < CardContent className={RootWrapper}>
+                < CardContent className={Root.RootWrapper}>
                 
 
                 
-                   <h2> {film.title}</h2>
-                    <p className="TitleTextContent" >{film.producer}</p>
-                    <p  id="TextContent">{film.release_date}</p>
+                <h2> {film.title}</h2>
+                {film.producer}
+                <br/>
+                {film.release_date}
                 
                 </CardContent>
               
           </Card>
      </CardActionArea>
-      </Grid>     </ul>   ))}
+      </Grid>
+           </ul>   ))}
 
     </>
   )

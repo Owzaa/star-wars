@@ -90,7 +90,7 @@ export default function SearchAppBar() {
 
             </StyledInputBase>
           </Search>  </Toolbar> 
-        <Button size="medium" variant="contained" color="info" onClick={SearchForm}  classNmae="btn btn-danger btn-lg">Search</Button>
+        <Button size="medium" variant="contained" color="info" onClick={SearchForm}  className="btn btn-danger btn-lg">Search</Button>
 
        
       </AppBar>
