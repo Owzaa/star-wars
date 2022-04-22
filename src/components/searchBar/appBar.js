@@ -81,15 +81,16 @@ export default function SearchAppBar() {
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
-              accept = "textInput"
-              inputProps= {SearchForm}
+              type="text"
+              id="search"
+              onChange={SearchForm}
+            
+              
             >
 
             </StyledInputBase>
           </Search>  </Toolbar> 
-        <Button size="medium" variant="contained" color="info" onClick={() =>{ 
-    ('SearchForm');
-    }}  classNmae="btn btn-danger btn-lg">Search</Button>
+        <Button size="medium" variant="contained" color="info" onClick={SearchForm}  classNmae="btn btn-danger btn-lg">Search</Button>
 
        
       </AppBar>
