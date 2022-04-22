@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { List } from './components/ListePeople/ListFilms';
 import { fetchData } from "./components/API/api";
 import SearchAppBar from "./components/searchBar/appBar";
-import SearchData from "./SearchData"
+import FilmDetails from "./components/filmDetails"
 function App() {
   const [film, setFilm] = useState([]);
 
@@ -13,8 +14,15 @@ function App() {
 
 
       
-  return (
-    <div className="App">
+  return ( 
+  <div className="App">
+    <Router>
+      <Switch>
+     
+        <Route exact path="/details/" component={FilmDetails} />
+      </Switch>
+    </Router>
+   
       <header className="App-header">
         <span className="searchBar">
           <SearchAppBar />
