@@ -4,23 +4,23 @@ import React, { useState } from "react"
 
 
 export default function SearchForm (props) {
-  const [films, setFilms] = React.useState('')
+  const [films, setFilms] = useState('')
 
 
   const handleSubmit = event => {
       event.preventDefault()
   
-      films
-        .get(searchFilms)
+      
+        .get(SearchForm)
         .then(resp => {
           props.onSubmit(resp.data)
           setFilms('')
         })
     }
 
-    const searchFilms = async name => {
-      if(name.length < 3 || name === '') return
-      const res = await fetch(`https://swapi.dev/api/films/?search={name}`)
+    const searchFilms = async param => {
+      if(param.length < 3 || param === '') return
+      const res = await fetch(`https://swapi.dev/api/films/?search={param}`)
       const data = await res.json()
       await console.log(data)
       await setFilms(data)
@@ -30,8 +30,8 @@ export default function SearchForm (props) {
         <input
           films
           type="text"
-          value={this.name.value|| ''}
-          onChange={name => searchFilms(this.name.target.value)}
+          value={this.state.name|| ''}
+          onChange={films => searchFilms(this.name.target.value)}
           placeholder="Search by Film (name) "
           required
         />

@@ -3,6 +3,7 @@ import './App.css';
 import { List } from './components/ListePeople/ListFilms';
 import { fetchData } from "./components/API/api";
 import SearchAppBar from "./components/searchBar/appBar";
+import SearchData from "./SearchData"
 function App() {
   const [film, setFilm] = useState([]);
 
@@ -11,28 +12,19 @@ function App() {
   })
 
 
-
+      
   return (
     <div className="App">
       <header className="App-header">
         <span className="searchBar">
           <SearchAppBar />
         </span>
-      if()
-        <div className="ListContainer" >
-        <main >
-        <h3>Search Results: </h3>
-        {film && (
-          <ul>
-            {film.map((film) => (
-              <li key={film.name}>{film.name}</li>
-            ))}
-          </ul>
-        )}
-      </main>
 
+      
+     
+  <div className="ListContainer" >
 
-          <List films={film} spacing={1} variant="contained" />
+          <List films={film}/>
         </div>
 
       </header>
